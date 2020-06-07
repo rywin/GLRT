@@ -250,16 +250,21 @@ vec3 trace(inout Ray ray, inout Scene scene) {
 	for (int n = 0; n < scene.n_bounces; n++) {
 		if (ray_cast_hit(ray, scene, hit_point, normal, material, uid, uv, tbn)) {
 			if (n == 0) {
-				pixel = material.color;
+				if (material.textureID == 0) {
+					pixel =  texture(texture_1_diffuse, uv).xyz * material.color;
+				}
+				else {
+					pixel = material.color;
+				}
 			}
 			if (material.textureID == 0){
 				//normal =  (texture(texture_1_normal, uv).xyz - 0.5) * 2.0;
-				normal = tbn * (texture(texture_1_normal, uv).xyz - 0.5) * 2.0;
+				normal = tbn * (texture(texture_1_normal, uv).xyz - 0.5) * 2.0 ;
 			}
 
 			vec3 reflected = reflect(ray.direction, normal);
 			if (material.textureID == 0){
-				pixel *= frac * texture(texture_1_diffuse, uv).xyz;
+				pixel *= frac * texture(texture_1_diffuse, uv).xyz * material.color;
 			}
 			else{
 				pixel *= frac * material.color;
