@@ -7,10 +7,6 @@
 [submodule "GL_Core/vendor/glm"]
 	path = GL_Core/vendor/glm
 	url = https://github.com/g-truc/glm.git
-[submodule "GL_Core/vendor/imgui/--force"]
-	path = GL_Core/vendor/imgui/--force
-	url = https://github.com/ocornut/imgui.git
-	branch = docking
 [submodule "GL_Core/vendor/imgui/imgui"]
 	path = GL_Core/vendor/imgui/imgui
 	url = https://github.com/ocornut/imgui.git
