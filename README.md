@@ -2,7 +2,7 @@
 
 Real-time Ray-tracing in OpenGL 4
 
-
+![GLRT](markdown/GLRT.png)
 
 ### Clone the repo 
 
