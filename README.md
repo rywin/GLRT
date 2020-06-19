@@ -7,7 +7,7 @@ Real-time Ray-tracing in OpenGL 4
 ### Clone the repo 
 
 ```bash
-git lfs clone --recursive git@gitlab.rywin.net:ryan/glrt.git
+git lfs clone --recursive https://github.com/rywin/GLRT.git
 ```
 
 ### Build with CMake
